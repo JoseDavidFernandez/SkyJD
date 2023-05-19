@@ -1,0 +1,8 @@
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Establece el max-width y max-height para dispositivos móviles */
+    body {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
