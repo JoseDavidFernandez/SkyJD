@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyJD - Ofertas de vuelos desde </title>
+    <!--        CSS                  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header-offers">
+        <div class="header-offers-content">
+            <h1 id="title">SkyJD</h1>
+        </div>
+    </div>
+    <div class="box-search-offers">
+        <h2 id="titleSearchOffers">Destino seleccionado</h2>
+        <section class="search-offers-place">
+                <span>Madrid (MAD)</span>
+                <span>-</span>
+                <span>Cualquier lugar</span>
+        </section>
+        <section class="search-offers-date">
+            <span id="offersSpanDate">Junio de 2023</span>
+            <span>1 adulto</span>
+        </section>
+    </div>
+    <div class="box-offers">
+        <p id="boxOffersText">Son precios estimados más bajos que hemos encontrado</p>
+        <section class="result-list">
+            <div class="box-offers-city" id="Barcelona">
+                <h3>Madrid</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+                <h3>Barcelona (BCN)</h3>
+                <div id="randomNumber"></div>
+            </div>
+        </section>
+        <div class="box-offers-city">
+            <h3>Madrid</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+            <h3>London (LDN)</h3>
+            <div id="randomNumber"></div>
+        </div>
+        <div class="box-offers-city">
+            <h3>Madrid</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+            <h3>Lisboa (LIS)</h3>
+            <div id="randomNumber"></div>
+        </div>
+        <div class="box-offers-city">
+            <h3>Madrid</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+            <h3>New York (NY)</h3>
+            <div id="randomNumber"></div>
+        </div>
+    </div>
+
+
+    <script>
+        // Generar número aleatorio entre 1 y 100
+        var randomNumber = Math.floor(Math.random() * 100) + 1;
+    
+        // Obtener referencia al elemento div
+        var divElement = document.getElementById("randomNumber");
+    
+        // Asignar el número aleatorio como contenido del div
+        divElement.innerHTML = randomNumber;
+    </script>
+    
+</body>
+</html>

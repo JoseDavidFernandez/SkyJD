@@ -4,32 +4,41 @@
 }
 
 /* Estilos específicos para dispositivos móviles */
+/* Establece el max-width y max-height para dispositivos móviles */
 @media (max-width: 768px) {
-  /* Establece el max-width y max-height para dispositivos móviles */
+/*----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------     Global    ----------------------------------------------------
+----------------------------------------------------------------------------------------------------------------*/
     body {
         max-width: 100%;
         max-height: 100%;
         background: black;
     }
-  /* HEADER
+
+  /* HEADER (index, offers)
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    .header{
+    .header-index, .header-offers{
       width: 100%;
       height: 200px;
       background-image: url(/img/mapamundi.jpg);
       background-size: contain;
-      
     }
-    .header-content{
+/*----------------------------------------------------------------------------------------------------------------
+---------------------------------------------     index.html    --------------------------------------------------
+----------------------------------------------------------------------------------------------------------------*/
+  /* HEADER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .header-index{
+
+    }
+    .header-index-content{
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0px 15px;
       padding: 20px 0px 0px 0px;
     }
-    #title{
-      color: white;
-    }
+    #title{ color: white; }
     .profile{
       border-radius: 100%;
       border: 1px solid white;
@@ -37,11 +46,11 @@
       height: 30px;
       background: white;
     }
-  /* HEADER end */
+  /* ----- HEADER end ----- */
 
   /* SEARCH
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    .box-search{
+    .box-search-index{
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,9 +63,7 @@
       border: 1px solid black;
       border-radius: 0.75rem;
     }
-    #title-search{
-      margin: 20px 0px 20px 0px ;
-    }
+    #titleSearchIndex{ margin: 20px 0px 20px 0px ;}
     .input {
       width: 220px;
       line-height: 28px;
@@ -69,10 +76,8 @@
       color: #0d0c22;
       transition: .3s ease;
     }
-    .input::placeholder {
-      color: #9e9ea7;
-    }
-    #btn-search{
+    .input::placeholder { color: #9e9ea7; }
+    #btnSearch{
       width: 200px;
       height: 40px;
       margin: 20px;
@@ -81,26 +86,21 @@
       border: 2px solid transparent;
       border-radius: 0.75rem;
     }
-    /* SEARCH end */
+  /* ----- SEARCH end ----- */
 
-    /* RECOMMENDATIONS
+  /* RECOMMENDATIONS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    .recommendations{
+    .recommendations-index{
       width: 90%;
       margin: -15% 5% 10% 5%;
-
     }
-    #title-recommendations{
-      color: white;
-    }
+    #titleRecommendations{ color: white; }
     .recommendations-cards{
       display: grid;
       grid-template-columns: 100%;
       grid-gap: 1rem 1rem;
       max-width: 400px;
-      
     }
-
     .recommendations-card{
       width: 100%;
       height: 100px;
@@ -110,7 +110,6 @@
       box-shadow: 0 1px 3px 0 rgba(37,32,31,.3);
       border-radius: 0.75rem;
     }
-
     .card-img{
       width: 40%;
       height: 100%;
@@ -123,12 +122,71 @@
       -moz-border-radius: 0.75rem 0 0 0.75rem;
       -ms-border-radius: 0.75rem 0 0 0.75rem;
       -o-border-radius: 0.75rem 0 0 0.75rem;
-}
+    }
     .card-content{
       width: 60%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-  
+  /* ----- RECOMMENDATIONS end ----- */
+
+/*----------------------------------------------------------------------------------------------------------------
+-----------------------------------------     ofertas-vuelos.html   ----------------------------------------------
+----------------------------------------------------------------------------------------------------------------*/
+  /* HEADER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */  
+    .header-offers-content{
+      text-align: center;
+      margin: 0px 15px;
+      padding: 20px 0px 0px 0px;
+    }
+  /* ----- HEADER end ----- */
+  /* SEARCH
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .box-search-offers{
+      /* display: flex;
+      flex-direction: column;
+      align-items: center;
+     */
+      position: relative;
+      width: 90%;
+      height: auto;
+      top: -80px;
+      margin: 5%;
+      background: white;
+      border: 1px solid black;
+      border-radius: 0.75rem;
+    }
+    #titleSearchOffers{
+      margin: 1rem 0px 1rem 0px;
+      text-align: center;
+    }
+    .search-offers-place, .search-offers-date{ margin: 0 0 1rem 1rem; }
+    .search-offers-place span, .search-offers-date span{
+      margin-right: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    #offersSpanDate{ box-shadow: inset -1px 0 0 0 #0d0c22; }
+  /* ----- SEARCH end ----- */
+  /* OFFERS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .box-offers{
+      width: 90%;
+      margin: -10% 5% 10% 5%;
+    }
+    #boxOffersText{ color: white; }
+    .box-offers-city{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 50px;
+      background: white;
+
+    }
+
+
+  /* ----- OFFERS end ----- */
+
 }
