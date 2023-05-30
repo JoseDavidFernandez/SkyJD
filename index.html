@@ -20,8 +20,16 @@
     </div>
     <div class="box-search-index">
         <h3 id="titleSearchIndex">Elige el lugar de salida</h3>
-        <input placeholder="Desde" type="search" class="input">
-        <button id="btnSearch">Buscar</button>
+        <div class="form-search-city">
+            <form action="ciudades.php" method="POST">
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" placeholder="Ingrese el destino">
+                <input type="submit" value="Buscar" id="btnSearch">
+            </form>
+        </div>
+        
+        <!-- <input placeholder="Desde" type="search" class="input">
+        <button id="btnSearch">Buscar</button> -->
     </div>
     <div class="recommendations-index">
         <h2 id="titleRecommendations">Recomendaciones</h2>
@@ -58,9 +66,7 @@
                     <h3 id="titleCardCity">Lisboa</h3>
                 </div>
             </div>
-
         </div>
-        
     </div>
 </body>
 </html>
