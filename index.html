@@ -11,7 +11,7 @@
 <body>
     <div class="header-index">
         <div class="header-index-content">
-            <h1 id="title">SkyJD</h1>
+            <h1 id="title"><a href="index.html">SkyJD</a></h1>
             <div class="login-profile">
                 <div class="profile">    
                 </div>
@@ -21,15 +21,11 @@
     <div class="box-search-index">
         <h3 id="titleSearchIndex">Elige el lugar de salida</h3>
         <div class="form-search-city">
-            <form action="ciudades.php" method="POST">
-                <label for="destino">Destino:</label>
-                <input type="text" id="destino" name="destino" placeholder="Ingrese el destino">
-                <input type="submit" value="Buscar" id="btnSearch">
+            <form action="ciudades.php" method="GET">
+                <input type="text" id="destino" name="destino">
+                <input type="submit" id="btnSearch" name="search" value="Buscar">
             </form>
         </div>
-        
-        <!-- <input placeholder="Desde" type="search" class="input">
-        <button id="btnSearch">Buscar</button> -->
     </div>
     <div class="recommendations-index">
         <h2 id="titleRecommendations">Recomendaciones</h2>
