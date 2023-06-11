@@ -58,13 +58,7 @@
       border-radius: 0.75rem;
     }
     #titleSearchIndex{ margin: 20px 0px 20px 0px ;}
-    /* Formulario Search City */
-    #myForm{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    #destino{
+    .input {
       width: 220px;
       line-height: 28px;
       padding: 0 1rem;
@@ -76,7 +70,7 @@
       color: #0d0c22;
       transition: .3s ease;
     }
-    #destino::placeholder{color: #9e9ea7;}
+    .input::placeholder { color: #9e9ea7; }
     #btnSearch{
       width: 200px;
       height: 40px;
@@ -159,6 +153,7 @@
       margin-right: 0.5rem;
       padding-right: 0.5rem;
     }
+    #offersSpanDate{ box-shadow: inset -1px 0 0 0 #0d0c22; }
   /* SEARCH end –––––––––––––––––––––––––––––––––––––––––––––––––– */
   /* OFFERS
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -178,17 +173,7 @@
       background: white;
     }
     #randomNumber{}
-    .btn-back-index{
-      text-align: center;
-    }
-    #btnBackToIndex{
-      width: 150px;
-      height: 40px;
-      color: black;
-      background: white;
-      border: 1px solid black;
-      border-radius: 0.75rem;
-    }
+    #BackToIndex{}
   /* OFFERS end –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 }

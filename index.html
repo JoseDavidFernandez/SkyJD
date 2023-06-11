@@ -9,24 +9,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header-index">
-        <div class="header-index-content">
-            <h1 id="title"><a href="index.html">SkyJD</a></h1>
+    <!-- HEADER –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="header">
+        <div class="header-content">
+            <h1><a href="index.html" id="tittle">SkyJD</a></h1>
             <div class="login-profile">
                 <div class="profile">    
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- SEARCH –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="box-search-index">
         <h3 id="titleSearchIndex">Elige el lugar de salida</h3>
         <div class="form-search-city">
-            <form action="ciudades.php" method="GET">
+            <form id="myForm">
                 <input type="text" id="destino" name="destino">
                 <input type="submit" id="btnSearch" name="search" value="Buscar">
             </form>
         </div>
     </div>
+
+    <!-- RECOMMENDATIONS –––––––––––––––––––––––––––––––––––––––––– -->
     <div class="recommendations-index">
         <h2 id="titleRecommendations">Recomendaciones</h2>
         <div class="recommendations-cards">
@@ -64,5 +69,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que se realice el envío predeterminado del formulario
+
+            var destino = document.getElementById('destino').value;
+
+            // Almacenar el valor introducido en el almacenamiento local
+            sessionStorage.setItem('destino', destino);
+
+            // Redirigir a la página city.html
+            window.location.href = 'city.html';
+        });
+    </script>
+
 </body>
 </html>
