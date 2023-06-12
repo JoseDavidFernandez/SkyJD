@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>SkyJD | Ofertas de vuelos </title>
+    <!--        CSS                  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="header">
+        <div class="header-content">
+            <h1><a href="index.html" id="tittle">SkyJD</a></h1>
+            <div class="login-profile">
+                <div class="profile">    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SEARCH –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="box-search-offers">
+        <h2 id="titleSearchOffers">Destino seleccionado</h2>
+        <section class="search-offers-place">
+            <span class="ciudad"></span>
+            <span>-</span>
+            <span>Cualquier lugar</span>
+        </section>
+        <section class="search-offers-date">
+            <span id="offersSpanDate">Junio de 2023</span>
+            <span>-</span>
+            <span>1 adulto</span>
+        </section>
+    </div>
+
+    <!-- OFFERS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="box-offers">
+        <table class="table-offers">
+            <tr id="dataRow" class="tr-offers-citys">
+                <!-- Datos generados dinámicamente con JavaScript -->
+            </tr>
+        </table>
+    </div>
+    
+    
+    <div class="btn-back-index">
+        <input type="button" value="Volver al buscador" id="btnBackToIndex" onClick="history.go(-1);">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/city.js"></script>
+</body>
+</html>
