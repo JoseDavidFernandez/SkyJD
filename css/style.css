@@ -14,7 +14,7 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header{
   width: 100%;
-  height: 200px;
+  height: 40vh;
   background-image: url(/img/mapamundi.jpg);
 }
 .header-content{
@@ -45,7 +45,8 @@ body {
   width: 90%;
   height: 200px;
   top: -80px;
-  margin: 5%;
+  margin: 0% 5% 5% 5%;
+  margin-top: -2vw;
   background: white;
   border: 1px solid black;
   border-radius: 0.75rem;
@@ -84,7 +85,7 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .recommendations-index{
   width: 90%;
-  margin: -10% 5% 5% 5%;;
+  margin: -5% 5% 5% 5%;;
 }
 #titleRecommendations{ color: white; }
 .recommendations-cards{
@@ -108,7 +109,7 @@ body {
   width: 40%;
 }
 .recommendations-card-img{
-  max-width: 100%;
+  width: 130px;
   height: 100%;
   /* height: auto; */
 }
@@ -118,7 +119,78 @@ body {
   align-items: center;
   justify-content: center;
 }
-  /* RECOMMENDATIONS end ––––––––––––––––––––––––––––––––––––––––– */
+/* RECOMMENDATIONS end ––––––––––––––––––––––––––––––––––––––––– */
+/* city.HTML
+  ========================================================================= */
+/* SEARCH
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.box-search-offers{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -6rem;
+  margin: 0 5%;
+}
+.search-offers{
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  background: white;
+  border: 1px solid black;
+  border-radius: 0.75rem;
+}
+#titleSearchOffers{
+  margin: 1rem 0px 1rem 0px;
+  text-align: center;
+}
+.search-offers-place, .search-offers-date{ padding: 0 0 2rem 2rem; }
+.search-offers-place span, .search-offers-date span{
+  margin-right: 0.5rem;
+    padding-right: 0.5rem;
+}
+/* SEARCH end –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* OFFERS
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Header offers city */
+.box-offers{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -5rem;
+  margin: 0 5%;
+}
+.table-offers{
+  max-width: 700px;
+  width: 100%;
+  height: 50px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 0.75rem;
+  padding: 3%;
+  border-spacing: 0 10px;
+}
+.table-offers thead{
+  background-color: lightblue;
+}
+.table-offers th{
+  border: 1px solid lightblue;
+  padding: 10px;
+}
+.table-offers td.ciudad-origen, .table-offers td.precio {
+  text-align: center;
+}
+.btn-back-index{
+  text-align: center;
+}
+#btnBackToIndex{
+  width: 150px;
+  height: 40px;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  border-radius: 0.75rem;
+}
+/* OFFERS end –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* RESPONSIVE
 ========================================================================= /
@@ -130,7 +202,8 @@ body {
     –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
   .box-search-index{
     width: 80%;
-    margin: 5% 10% 5% 10%;
+    margin: 0% 10% 5% 10%;
+    margin-top: -2vw;
   }
 }
 
@@ -142,7 +215,8 @@ body {
     –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
   .box-search-index{
     width: 80%;
-    margin: 5% 10% 5% 10%;
+    margin: 0% 10% 5% 10%;
+    margin-top: -2vw;
   }
 }
 
@@ -153,8 +227,9 @@ body {
   /* HEADER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
     .header{
-      background-size: contain;
+      background-size:contain;
     }
+
   /* HEADER end –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* index.HTML
   ========================================================================= */
@@ -162,95 +237,10 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
     .recommendations-index{
       width: 90%;
-      margin: -15% 5% 10% 5%;
+      margin: -10% 5% 10% 5%;
     }
     .recommendations-card{
       width: 100%;
-      display: flex;
-    }
-    .card-img{
-      width: 40%;
-      height: 100%;
-    }
-    .card-content{
-      width: 60%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   /* RECOMMENDATIONS end ––––––––––––––––––––––––––––––––––––––––– */
-
-/* city.HTML
-  ========================================================================= */
-
-  /* SEARCH
-  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-    .box-search-offers{
-      /* display: flex;
-      flex-direction: column;
-      align-items: center;
-     */
-      position: relative;
-      width: 90%;
-      height: auto;
-      top: -80px;
-      margin: 5%;
-      background: white;
-      border: 1px solid black;
-      border-radius: 0.75rem;
-    }
-    #titleSearchOffers{
-      margin: 1rem 0px 1rem 0px;
-      text-align: center;
-    }
-    .search-offers-place, .search-offers-date{ margin: 0 0 1rem 1rem; }
-    .search-offers-place span, .search-offers-date span{
-      margin-right: 0.5rem;
-      padding-right: 0.5rem;
-    }
-  /* SEARCH end –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  /* OFFERS
-  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-    /* Header offers city */
-    .box-offers{
-      width: 90%;
-      margin: -10% 5% 10% 5%;
-    }
-    #boxOffersText{ color: white; }
-    /* Content offers city */
-    .box-offers-city{
-      /* display: flex;
-      align-items: center;
-      justify-content: space-around; */
-      width: 100%;
-      height: 50px;
-      background: white;
-    }
-    #dataRow td:nth-child(1){
-      width:auto ;
-      padding-left: 10px;
-    }
-    #dataRow td:nth-child(2){
-      width:auto;
-    }
-    #dataRow td:nth-child(3){
-      width:50%;
-      padding-left: 10px;
-    }
-    #dataRow td:nth-child(4){
-      width:auto ;
-    }    
-    .btn-back-index{
-      text-align: center;
-    }
-    #btnBackToIndex{
-      width: 150px;
-      height: 40px;
-      color: black;
-      background: white;
-      border: 1px solid black;
-      border-radius: 0.75rem;
-    }
-  /* OFFERS end –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 }

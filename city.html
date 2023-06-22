@@ -22,107 +22,43 @@
     
     <!-- SEARCH –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="box-search-offers">
-        <h2 id="titleSearchOffers">Destino seleccionado</h2>
-        <section class="search-offers-place">
-            <span class="ciudad"></span>
-            <span>-</span>
-            <span>Cualquier lugar</span>
-        </section>
-        <section class="search-offers-date">
-            <span id="offersSpanDate">Junio de 2023</span>
-            <span>-</span>
-            <span>1 adulto</span>
-        </section>
+        <div class="search-offers">
+            <h2 id="titleSearchOffers">Destino seleccionado</h2>
+            <section class="search-offers-place">
+                <span class="ciudad"></span>
+                <span>-</span>
+                <span>Cualquier lugar</span>
+            </section>
+            <section class="search-offers-date">
+                <span id="offersSpanDate"></span>
+                <span>-</span>
+                <span>1 adulto</span>
+            </section>
+        </div>
     </div>
 
     <!-- OFFERS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="box-offers">
-        <p id="boxOffersText">Son precios estimados más bajos que hemos encontrado</p>
-
-        <table class="box-offers-city" id="cityBarcelona">
-            <tr id="dataRow">
-                <td id="colCity"><span class="ciudad"></span></td>
-                <td id="colIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-                </td>
-                <td id="colDestination"><h3>Barcelona (BCN)</h3></td>
-                <td id="randomNumber"></td>
-            </tr>
-        </table>
-
-        <table class="box-offers-city" id="cityLondon">
-            <tr id="dataRow">
-                <td id="colCity"><span class="ciudad"></span></td>
-                <td id="colIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-                </td>
-                <td id="colDestination"><h3>London (LDN)</h3></td>
-                <td id="randomNumber"></td>
-            </tr>
-        </table>
-
-        <table class="box-offers-city" id="cityLisboa">
-            <tr id="dataRow">
-                <td id="colCity"><span class="ciudad"></span></td>
-                <td id="colIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-                </td>
-                <td id="colDestination"><h3>Lisboa (LIS)</h3></td>
-                <td id="randomNumber"></td>
-            </tr>
-        </table>
-
-        <table class="box-offers-city" id="cityNewYork">
-            <tr id="dataRow">
-                <td id="colCity"><span class="ciudad"></span></td>
-                <td id="colIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-                </td>
-                <td id="colDestination"><h3>New York (NY)</h3></td>
-                <td id="randomNumber"></td>
+        <table class="table-offers">
+            <thead>
+                <tr id="detailsRow">
+                    <th>Origen</th>
+                    <th colspan="2">Destino</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tr id="dataRow" class="tr-offers-citys">
+                <!-- Datos generados dinámicamente con JavaScript -->
             </tr>
         </table>
     </div>
+    
+    
     <div class="btn-back-index">
         <input type="button" value="Volver al buscador" id="btnBackToIndex" onClick="history.go(-1);">
     </div>
-    
-    
-    <script>
-        // Obtener el valor almacenado del almacenamiento local
-        var destino = sessionStorage.getItem('destino');
 
-        // Obtener la colección de elementos con la clase 'ciudad'
-        var elementosCiudad = document.getElementsByClassName('ciudad');
-
-        // Iterar sobre la colección y asignar el valor a cada elemento
-        for (var i = 0; i < elementosCiudad.length; i++) {
-            elementosCiudad[i].textContent = destino;
-        }
-
-        //NUMERO ALEATORIO
-        // Obtener la colección de elementos con el atributo id "randomNumber"
-        var randomNumberElements = document.querySelectorAll('[id="randomNumber"]');
-
-        // Iterar sobre la colección y asignar un número aleatorio a cada elemento
-        randomNumberElements.forEach(function(element) {
-            // Generar un número aleatorio entre 1 y 500
-            var randomNumber = Math.floor(Math.random() * 500) + 1;
-            // Crear el contenido con el número aleatorio y el símbolo del euro
-            var content = randomNumber + "€";
-            // Asignar el número aleatorio al contenido del elemento
-            element.textContent = content;
-        });
-
-    </script>
-
+    <!-- JavaScript -->
+    <script src="js/city.js"></script>
 </body>
 </html>
