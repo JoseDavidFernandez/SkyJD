@@ -3,14 +3,14 @@
     var offersSpanDate = document.getElementById('offersSpanDate');
 
     // Obtener la fecha actual
-    var fechaActual = new Date();
+    var currentDate = new Date();
 
     // Obtener el mes y el año actual
-    var mesActual = fechaActual.toLocaleString('default', { month: 'long' });
-    var añoActual = fechaActual.getFullYear();
+    var currentMonth = currentDate.toLocaleString('default', { month: 'long' });
+    var currentYear = currentDate.getFullYear();
 
     // Establecer el mes y el año actual en el elemento span
-    offersSpanDate.textContent = mesActual + ' de ' + añoActual;
+    offersSpanDate.textContent = currentMonth + ' de ' + currentYear;
 
 
 
@@ -32,7 +32,7 @@
         var ciudadIntroducida = sessionStorage.getItem('destino');
 
     // Array de ciudades
-        var ciudades = ["Barcelona", "London", "Lisboa", "New York", "Amsterdam", "Madrid", "Milán"];
+        var ciudades = ["Barcelona", "London", "Lisboa", "New York", "Amsterdam", "Madrid", "Milán", "Budapest", "Paris"];
 
     // Obtener la tabla
         var table = document.querySelector('table');
